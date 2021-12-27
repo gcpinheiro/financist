@@ -1,0 +1,7 @@
+<div class="container">
+  <input [type]="chooseType" [placeholder]="placeholder" >
+  <div class="box-icon" *ngIf="showIcon">
+    <img [src]="iconPath" alt="" #icon id="icon" (click)="showHidePassword()" (mouseover)="mouseOver()" (mouseout)="mouseOut()">
+  </div>
+</div>
+
