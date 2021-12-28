@@ -20,9 +20,6 @@ export class InputComponent implements OnInit {
 
   ngOnInit(): void {
     this.chooseType = this.type
-  //  setTimeout(() => {
-  //   console.log(this.icon.style.getPropertyValue('icon'));
-  //  }, 5000);
   }
 
 
@@ -32,9 +29,19 @@ export class InputComponent implements OnInit {
 
 
   public showHidePassword(){
-    this.chooseType === 'password'?
-      this.iconPath = 'assets/images/icons/eye-slash-regular.svg':
+
+    if(this.chooseType === 'password'){
+      this._renderer2.addClass(this.asIcon.nativeElement, "animation");
+      this.iconPath = 'assets/images/icons/eye-slash-regular.svg'
+    }
+    else{
+      this._renderer2.removeClass(this.asIcon.nativeElement, "animation");
       this.iconPath = 'assets/images/icons/eye-regular.svg';
+
+    }
+    // this.chooseType === 'password'?
+    //   this.iconPath = 'assets/images/icons/eye-slash-regular.svg':
+    //   this.iconPath = 'assets/images/icons/eye-regular.svg';
     this.changeTypeInput();
   }
 

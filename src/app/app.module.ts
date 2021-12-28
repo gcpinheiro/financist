@@ -10,6 +10,7 @@ import { RegisterComponent } from './features/register/register.component';
 import { InputModule } from './shareds/input/input.module';
 import { HeaderComponent } from './shareds/header/header.component';
 import { LeftBarComponent } from './shareds/left-bar/left-bar.component';
+import { ButtonIconComponent } from './shareds/button-icon/button-icon.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { LeftBarComponent } from './shareds/left-bar/left-bar.component';
     RegisterComponent,
     HeaderComponent,
     LeftBarComponent,
+    ButtonIconComponent,
   ],
   imports: [
     BrowserModule,
