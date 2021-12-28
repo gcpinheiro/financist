@@ -22,7 +22,6 @@ export class ButtonIconComponent implements OnInit {
 
   public initializeStyles(){
     var box = this.box.nativeElement;
-    var color = this.color
     this._renderer2.setStyle(box, "background-color", this.color);
   }
 

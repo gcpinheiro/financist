@@ -7,26 +7,22 @@ import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef, Rendere
   styleUrls: ['./input.component.sass']
 })
 export class InputComponent implements OnInit {
-  // @ViewChild('inputFocus') inputFocusAction: ElementRef
+
   @ViewChild('icon') asIcon: ElementRef;
   @Input() type = "";
   @Input() chooseType = "";
   @Input() placeholder = '';
-  public iconPath = 'assets/images/icons/eye-regular.svg';
+  iconPath = 'assets/images/icons/eye-regular.svg';
 
-
-
-  constructor(private _renderer2: Renderer2, private el: ElementRef) { }
+  constructor(private _renderer2: Renderer2) { }
 
   ngOnInit(): void {
     this.chooseType = this.type
   }
 
-
   public get showIcon(){
     return this.type === 'password'? true : false;
   }
-
 
   public showHidePassword(){
 
@@ -39,9 +35,6 @@ export class InputComponent implements OnInit {
       this.iconPath = 'assets/images/icons/eye-regular.svg';
 
     }
-    // this.chooseType === 'password'?
-    //   this.iconPath = 'assets/images/icons/eye-slash-regular.svg':
-    //   this.iconPath = 'assets/images/icons/eye-regular.svg';
     this.changeTypeInput();
   }
 

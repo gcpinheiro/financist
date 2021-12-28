@@ -9,7 +9,6 @@
   align-items: center
   background-color: $color-neutral-primary
 
-
   .background-image
     width: 40%
     height: 75%
@@ -51,7 +50,7 @@
 
       textarea:focus, input:focus
         outline: none
-        box-shadow: 4px 4px 4px #04e62200
+        box-shadow: 4px 4px 4px $color-primary
         border-color: $color-primary
 
     .buttons
@@ -73,7 +72,7 @@
         &:disabled
           background-color: $color-disabled
           color: $color-dark
-
+          cursor: not-allowed
 
       .access:hover, .register:hover
          opacity: .8
