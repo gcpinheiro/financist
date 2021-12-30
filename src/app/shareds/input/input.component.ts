@@ -13,6 +13,7 @@ export class InputComponent implements OnInit {
   @Input() chooseType = "";
   @Input() placeholder = '';
   iconPath = 'assets/images/icons/eye-regular.svg';
+  focus = false;
 
   constructor(private _renderer2: Renderer2) { }
 
@@ -54,5 +55,18 @@ export class InputComponent implements OnInit {
     if(this.chooseType === 'password'){
       this._renderer2.setStyle(icon, "transform", "scale(1.0)");
     }
+  }
+
+  onFocus(){
+    console.log(this.focus)
+    this.focus = !this.focus;
+  }
+
+  onBlur(){
+    this.focus = !this.focus;
+  }
+
+  public get activeFocus(){
+    return this.focus? "focus-div": '';
   }
 }

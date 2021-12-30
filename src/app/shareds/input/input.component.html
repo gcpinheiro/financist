@@ -1,5 +1,5 @@
-<div class="container">
-  <input [type]="chooseType" [placeholder]="placeholder" >
+<div class="container" [ngClass]="activeFocus">
+  <input [type]="chooseType" [placeholder]="placeholder" (focus)="onFocus()" (blur)="onBlur()">
   <div class="box-icon" *ngIf="showIcon">
     <img [src]="iconPath" alt="" #icon id="icon" (click)="showHidePassword()" (mouseover)="mouseOver()" (mouseout)="mouseOut()">
   </div>

@@ -12,11 +12,11 @@
   .background-image
     width: 40%
     height: 75%
-    background: url('/assets/images/bg-login.jpg') no-repeat center center
+    background: url('/assets/images/bg1.png') no-repeat center center
     background-size: cover
-    background-position-y: -200px
     border-top-left-radius: 8px
     border-bottom-left-radius: 8px
+    animation: fadeIn 1s ease-in
 
   form
     width: 30%
@@ -25,11 +25,11 @@
     border: none
     border-top-right-radius: 8px
     border-bottom-right-radius: 8px
-
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.08)
     display: flex
     flex-direction: column
     align-items: center
+    animation: fadeIn 1s ease-in .1s
 
     img
       width: 40%
@@ -83,3 +83,12 @@
       .register
         background-color: $color-secondary
         color: $color-neutral-secondary
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+    margin-right: 100px
+
+  100%
+    opacity: 1
+    margin-right: 0px

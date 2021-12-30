@@ -9,6 +9,7 @@ export class ButtonIconComponent implements OnInit {
 
   @Input() pathImage: string = "assets/images/icons/google.svg";
   @Input() color: string;
+  @Input() width = '';
   @ViewChild('box') box: ElementRef;
 
   constructor(private _renderer2: Renderer2) { }
@@ -23,6 +24,10 @@ export class ButtonIconComponent implements OnInit {
   public initializeStyles(){
     var box = this.box.nativeElement;
     this._renderer2.setStyle(box, "background-color", this.color);
+  }
+
+  public get setWidth(){
+    return this.width != ''? this.width: '';
   }
 
 }
