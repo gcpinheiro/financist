@@ -1,0 +1,58 @@
+@import ./../../core/styles/themes
+
+.container
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  box-sizing: border-box
+
+  .percent
+    position: relative
+
+    svg
+      position: relative
+      width: 60px
+      height: 60px
+      border-radius: 50%
+
+      circle
+        fill: none
+        stroke-width: 7
+        stroke: #000
+        transform: translate(5px, 5px)
+        stroke-dasharray: 440
+        stroke-dashoffset: 440
+
+
+      circle:nth-child(1)
+        stroke-dashoffset: 0
+        stroke: $color-neutral-secondary
+
+      circle:nth-child(2)
+        stroke-dashoffset: calc( 440 - 440 * 50 / 100 )
+        stroke: $color-primary
+
+    .indicator
+      h2
+        font-size: 14px
+        color: $color-white
+
+        span
+          font-size: 10px
+
+.container, .percent, .indicator
+  position: absolute
+  top: 0
+  left: 0
+  width: 60px
+  height: 60px
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 50%
+
+.container
+  left: calc(100%  -  20%)
+  top: 20px

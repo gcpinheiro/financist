@@ -9,80 +9,87 @@
   align-items: center
   background-color: $color-neutral-primary
 
-  .background-image
-    width: 40%
+  .box
+    width: 65%
     height: 75%
-    background: url('/assets/images/bg1.png') no-repeat center center
-    background-size: cover
-    border-top-left-radius: 8px
-    border-bottom-left-radius: 8px
-    animation: fadeIn 1s ease-in
-
-  form
-    width: 30%
-    height: 75%
-    background-color: #fff
-    border: none
-    border-top-right-radius: 8px
-    border-bottom-right-radius: 8px
+    border-radius: 8px
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.08)
     display: flex
-    flex-direction: column
-    align-items: center
-    animation: fadeIn 1s ease-in .1s
+    flex-direction: row
+    animation: fadeIn .7s ease-in
 
-    img
-      width: 40%
-      margin-top: 15%
+    .background-image
+      width: 65%
+      height: 100%
+      background: url('/assets/images/bg1.png') no-repeat center center
+      background-size: cover
+      border-top-left-radius: 8px
+      border-bottom-left-radius: 8px
 
-    .inputs
-      width: 80%
-      height: 38%
+    form
+      width: 45%
+      height: 100%
+      background-color: #fff
+      border: none
+      border-top-right-radius: 8px
+      border-bottom-right-radius: 8px
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.08)
       display: flex
       flex-direction: column
-      justify-content: space-around
-      margin-top: 10%
-
-      input
-        width: 97%
-        height: 20%
-        border: 2px solid $color-neutral-primary
-
-      textarea:focus, input:focus
-        outline: none
-        box-shadow: 4px 4px 4px $color-primary
-        border-color: $color-primary
-
-    .buttons
-      width: 80%
-      height: 18%
-      display: flex
-      flex-direction: row
-      justify-content: space-between
       align-items: center
 
-      .access, .register
-        width: 45%
-        height: 35%
-        border-radius: 8px
-        border: none
-        cursor: pointer
-        color: $color-neutral-secondary
+      img
+        width: 40%
+        margin-top: 15%
 
-        &:disabled
-          background-color: $color-disabled
-          color: $color-dark
-          cursor: not-allowed
+      .inputs
+        width: 80%
+        height: 38%
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        margin-top: 10%
 
-      .access:hover, .register:hover
-         opacity: .8
+        input
+          width: 97%
+          height: 20%
+          border: 2px solid $color-neutral-primary
 
-      .access
-        background-color: $color-primary
+        textarea:focus, input:focus
+          outline: none
+          box-shadow: 4px 4px 4px $color-primary
+          border-color: $color-primary
 
-      .register
-        background-color: $color-secondary
-        color: $color-neutral-secondary
+      .buttons
+        width: 80%
+        height: 18%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+
+        .access, .register
+          width: 47%
+          height: 37px
+          border-radius: 8px
+          border: none
+          cursor: pointer
+          color: $color-neutral-secondary
+
+          &:disabled
+            background-color: $color-disabled
+            color: $color-dark
+            cursor: not-allowed
+
+        .access:hover, .register:hover
+          opacity: .8
+
+        .access
+          background-color: $color-primary
+
+        .register
+          background-color: $color-secondary
+          color: $color-neutral-secondary
 
 @keyframes fadeIn
   0%

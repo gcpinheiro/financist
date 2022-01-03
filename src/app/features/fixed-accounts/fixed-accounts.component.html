@@ -1,14 +1,11 @@
-<div class="container">
-  <div class="top-bar">
-    <app-top-bar></app-top-bar>
-  </div>
+<div class="container" *ngIf="true">
+  <header>
+    <app-left-bar></app-left-bar>
+  </header>
   <main>
-    <div class="left-bar">
-      <app-left-bar></app-left-bar>
-    </div>
-
+    <app-top-bar></app-top-bar>
     <div class="content scrollbar">
-      <div class="indicators">
+      <div class="options">
         <a [routerLink]="'/home'">Início</a>
         <a [routerLink]="'/fixed-account'">Contas fixas</a>
         <a [routerLink]="'/varied-account'">Contas variáveis</a>
