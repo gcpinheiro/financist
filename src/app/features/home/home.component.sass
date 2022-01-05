@@ -5,34 +5,93 @@
   width: 100%
   height: 100%
   display: flex
-  flex-direction: column
+  flex-direction: row
   box-sizing: border-box
   background: $color-white
 
-  .top-bar
-    width: 100%
-    height: 10%
-    background: #545543
+  .left-bar
+    width: 18%
+    height: 100%
 
   main
-    width: 100%
-    height: 90%
-    background: green
+    width: 82%
+    height: 100%
     display: flex
-    flex-direction: row
-    border-top-right-radius: 25px
-    border-bottom-right-radius: 25px
+    flex-direction: column
 
-    .left-bar
-      width: 18%
-      height: 100%
+    .top-bar
+      width: 100%
+      height: 15%
 
     .content
-      padding: 2%
+      width: 100%
+      height: 85%
+      padding: 16px
       box-sizing: border-box
 
-    .indicators
-      display: flex
-      flex-direction: column
-      border-radius: 8px
+      .box-content
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        border-radius: 8px
+        margin-top: 5%
+
+        .cards
+          width: 20%
+          height: 80px
+          display: flex
+          flex-direction: column
+          justify-content: space-around
+          border-right: 1px solid #DDDDDD
+
+          .numbers
+            width: 100%
+
+            span
+              font-size: 24px
+              font-weight: 700
+              color: $color-terciary
+
+          .indicators
+            width: 100%
+            display: flex
+            flex-direction: row
+            align-items: center
+
+            span
+              font-size: 14px
+              font-weight: 400
+              color: #8E8E8E
+
+            img
+              margin-left: 5%
+        .cards:nth-child(4)
+          border-right: none
+
+      .box-graphics
+        display: flex
+        flex-direction: row
+        width: 100%
+        margin-top: 5%
+
+        .graphic
+          width: 45%
+          height: 290px
+          border-radius: 8px
+          display: flex
+          flex-direction: row
+          justify-content: center
+          padding-left: 3%
+          box-sizing: border-box
+
+          img
+            padding: 20px
+            // box-shadow: 0 4px 4px 4px #dfdede
+            // border-radius: 8px
+
+        .graphic:nth-child(2)
+          margin-left: 5%
+
+
 

@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Renderer2, ElementRef, ViewChild, AfterViewIn
 })
 export class CircleProgressBarComponent implements OnInit, AfterViewInit {
 
-  @Input() percentValue = 17.5;
+  @Input() percentValue = 5.5;
   @Input() sizeCircle = 50;
   @ViewChild('numberPercent') numberPercent: ElementRef;
   @ViewChild('circle') circle: ElementRef;
@@ -25,6 +25,7 @@ export class CircleProgressBarComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(){
     this._renderer2.setStyle(this.numberPercent.nativeElement, "stroke-dashoffset", `calc( 440 - 440 * ${this.percentValue} / 100 )`)
+    // this._renderer2.setStyle(this.numberPercent.nativeElement, "stroke-dashoffset", `20`)
     // this._renderer2.setAttribute(this.circle.nativeElement, "cx", "50")
     // this._renderer2.setAttribute(this.circle.nativeElement, "cy", "50")
     // this._renderer2.setAttribute(this.circle.nativeElement, "r", "50")

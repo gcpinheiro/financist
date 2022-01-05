@@ -7,16 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TopBarComponent implements OnInit {
 
-  nome = "Gabriel Castro";
-  sexo = "M";
-  @Input() pathImage = 'assets/images/icons/user-woman.png';
+  nome = "Rosana Marcos";
+  sexo = "F";
+  @Input() pathImage:string;
   constructor() { }
 
   ngOnInit(): void {
   }
 
   public get icon(){
-    return this.sexo == 'F'? 'assets/images/icons/user-woman.png': 'assets/images/icons/user-man.svg'
+    return this.sexo == 'M'? 'assets/images/icons/user-man.svg': 'assets/images/icons/user-woman.svg'
   }
 
 }
