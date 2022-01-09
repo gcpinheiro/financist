@@ -1,0 +1,20 @@
+{
+  "users":[
+    {
+      "email": "egcastro96@gmail.com",
+      "name": "Gabriel Castro",
+      "meta": 2500
+    },
+    {
+      "email": "mrcm1975@gmail.com",
+      "name": "Maria Rosana",
+      "meta": 3500
+    },
+    {
+      "email": "egcastro96@gmail.com",
+      "name": "Hermano de Castro",
+      "meta": 4500
+    }
+  ]
+
+}

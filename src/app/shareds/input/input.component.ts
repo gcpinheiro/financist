@@ -12,6 +12,7 @@ export class InputComponent implements OnInit {
   @Input() type = "";
   @Input() chooseType = "";
   @Input() placeholder = '';
+  @Input() errorMensagem = '';
   iconPath = 'assets/images/icons/eye-regular.svg';
   focus = false;
 

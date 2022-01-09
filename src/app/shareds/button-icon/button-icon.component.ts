@@ -10,21 +10,20 @@ export class ButtonIconComponent implements OnInit {
   @Input() pathImage: string = "assets/images/icons/google.svg";
   @Input() color: string;
   @Input() width = '';
-  @ViewChild('box') box: ElementRef;
+  // @ViewChild('box') box: ElementRef;
 
   constructor(private _renderer2: Renderer2) { }
 
   ngOnInit(): void {
-    console.log(this.color);
-    setTimeout(() => {
-      this.initializeStyles()
-    });
+    // setTimeout(() => {
+    //   this.initializeStyles()
+    // });
   }
 
-  public initializeStyles(){
-    var box = this.box.nativeElement;
-    this._renderer2.setStyle(box, "background-color", this.color);
-  }
+  // public initializeStyles(){
+  //   var box = this.box.nativeElement;
+  //   this._renderer2.setStyle(box, "background-color", this.color);
+  // }
 
   public get setWidth(){
     return this.width != ''? this.width: '';

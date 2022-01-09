@@ -16,6 +16,12 @@ import { FixedAccountsComponent } from './features/fixed-accounts/fixed-accounts
 import { VariedAccountsComponent } from './features/varied-accounts/varied-accounts.component';
 import { CardsComponent } from './shareds/left-bar/components/cards/cards.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
+import { RegisterAccountsComponent } from './features/register-accounts/register-accounts.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalModule } from './shareds/modal/modal.module';
+import { ModalComponent } from './shareds/modal/modal.component';
+
 
 @NgModule({
   declarations: [
@@ -31,13 +37,18 @@ import { PageNotFoundComponent } from './features/page-not-found/page-not-found.
     VariedAccountsComponent,
     CardsComponent,
     PageNotFoundComponent,
+    RegisterAccountsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    InputModule
+    InputModule,
+    FormsModule,
+    HttpClientModule,
+    ModalModule
   ],
-  providers: [],
+  providers: [ModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

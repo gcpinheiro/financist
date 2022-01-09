@@ -1,11 +1,11 @@
 <div class="container">
   <div class="box-goal">
-    <span>Acompanhe sua meta: </span>
+    <span>Acompanhe sua meta: {{data?.meta}}</span>
     <circle-progress-bar></circle-progress-bar>
   </div>
   <div class="profile">
-    <span>{{nome}}</span>
-    <div class="initials-name">
+    <span>{{data?.name}}</span>
+    <div class="card-image">
       <img [src]="icon" alt="">
     </div>
     <img src="assets/images/icons/arrow-down.svg" alt="" class="button-dropdown">

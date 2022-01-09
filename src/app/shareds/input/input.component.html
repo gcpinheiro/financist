@@ -4,4 +4,5 @@
     <img [src]="iconPath" alt="" #icon id="icon" (click)="showHidePassword()" (mouseover)="mouseOver()" (mouseout)="mouseOut()">
   </div>
 </div>
+<p *ngIf="errorMensagem != ''" style="font-size: 10px; color: red; margin-bottom: 5px;">error</p>
 

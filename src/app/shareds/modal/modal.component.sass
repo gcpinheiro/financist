@@ -1,0 +1,72 @@
+@import ./../../core/styles/themes
+
+.container
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, .7)
+  position: absolute
+  top: 0
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+
+  .box-modal
+    width: 30%
+    height: 60%
+    background-color: $color-white
+    border-radius: 8px
+    animation: fadeInTop .7s ease-in
+
+    .modal-header
+      height: 35%
+      width: 100%
+      padding: 0 5%
+      box-sizing: border-box
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      border-top-left-radius: 8px
+      border-top-right-radius: 8px
+      background: $color-alert-primary
+
+      img
+        width: 20%
+        border-radius: 50%
+        padding: 20px
+        box-sizing: border-box
+        border: 1px solid $color-white
+
+    .modal-content
+      height: 65%
+      width: 100%
+      padding: 5% 10%
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      h1
+        color: $color-black
+        font-weight: 500
+
+      p, button
+        margin-top: 8%
+        text-align: center
+
+      p
+        color: $color-neutral-primary
+
+      button
+        width: 90%
+        height: 22%
+        background: $color-alert-primary
+        color: $color-white
+        border: none
+        border-radius: 6px
+        cursor: pointer
+        font-size: 14px
+
+      button:hover
+        opacity: .8

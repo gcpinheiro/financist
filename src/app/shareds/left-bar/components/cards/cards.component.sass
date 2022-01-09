@@ -2,34 +2,50 @@
 
 .container
   width: 100%
-  height: 50px
+  height: 40px
   display: flex
   flex-direction: row
   justify-content: center
   align-items: center
   box-sizing: border-box
+  border-radius: 8px
 
   .box
     width: 100%
+    height: 100%
     display: flex
     flex-direction: row
     justify-content: flex-start
     align-items: center
     cursor: pointer
     border-radius: 8px
-    height: 80%
     padding-left: 5%
     box-sizing: border-box
 
     img
       width: 8%
+      filter: $color-filter-secondary
 
     span
       margin-top: 2%
       margin-left: 6%
       font-size: 16px
-      color: $color-white
+      color: $color-primary
 
   .box:hover
-    background-color: rgba(152, 250, 250, 0.4)
+    background-color: rgba(119, 201, 212, .2)
+
+.is-active
+  background: $color-primary
+  span
+    color: $color-white !important
+
+  img
+    filter: $color-filter-white !important
+
+.is-active:hover
+  background-color: rgb(1, 82, 73, .8)
+
+
+
 
