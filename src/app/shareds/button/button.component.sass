@@ -1,0 +1,40 @@
+@import ./../../core/styles/themes
+@import ./../../core/styles/animation
+
+
+button
+  width: 45%
+  height: 37px
+  border-radius: 8px
+  border: none
+  cursor: pointer
+  color: $color-white
+  font-size: 14px
+
+
+.access, .register
+  width: 45%
+  height: 37px
+  border-radius: 8px
+  border: none
+  cursor: pointer
+  color: $color-white
+  font-size: 14px
+
+  &:disabled
+    background-color: $color-disabled
+    color: $color-dark
+
+.access:hover
+  opacity: .9
+
+.access
+  background-color: $color-primary
+
+.register
+  color: $color-primary
+  background-color: $color-white
+  font-weight: 500
+
+.register:hover
+  box-shadow: 0 1px 1px 2px $color-neutral-secondary

@@ -26,15 +26,11 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'fixed-account',
-    component: FixedAccountsComponent
-  },
-  {
-    path: 'varied-account',
-    component: VariedAccountsComponent
-  },
-  {
     path: 'register-account',
+    component: RegisterAccountsComponent
+  },
+  {
+    path: 'viwe-accounts',
     component: RegisterAccountsComponent
   },
   {

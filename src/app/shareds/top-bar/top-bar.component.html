@@ -1,6 +1,9 @@
 <div class="container">
+  <div class="menu" (click)="toggleLeftBar()" [style.left]="leftPosition">
+    <img [src]="iconStateLeftBar" alt="">
+  </div>
   <div class="box-goal">
-    <span>Acompanhe sua meta: {{data?.meta}}</span>
+    <span>Meta de gastos mensais: {{data?.meta | currency: "BRL"}}</span>
     <circle-progress-bar></circle-progress-bar>
   </div>
   <div class="profile">

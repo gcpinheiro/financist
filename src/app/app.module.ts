@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from './shareds/modal/modal.module';
 import { ModalComponent } from './shareds/modal/modal.component';
+import { LOCALE_ID } from '@angular/core';
+import localePt from '@angular/common/locales/pt';
+import {registerLocaleData} from '@angular/common';
+import { ViewAccountsComponent } from './features/view-accounts/view-accounts.component';
+import { ButtonComponent } from './shareds/button/button.component';
+registerLocaleData(localePt)
+
 
 
 @NgModule({
@@ -38,6 +46,8 @@ import { ModalComponent } from './shareds/modal/modal.component';
     CardsComponent,
     PageNotFoundComponent,
     RegisterAccountsComponent,
+    ViewAccountsComponent,
+    ButtonComponent,
 
   ],
   imports: [
@@ -46,9 +56,13 @@ import { ModalComponent } from './shareds/modal/modal.component';
     InputModule,
     FormsModule,
     HttpClientModule,
-    ModalModule
+    ModalModule,
+    BrowserAnimationsModule
   ],
-  providers: [ModalComponent],
+  providers: [ModalComponent, {
+    provide: LOCALE_ID,
+    useValue: 'pt-BR'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

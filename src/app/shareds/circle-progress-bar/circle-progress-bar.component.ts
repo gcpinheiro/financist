@@ -49,7 +49,7 @@ export class CircleProgressBarComponent implements OnInit, AfterViewInit {
   setSizeContainers(el: ElementRef, size: number, color?: string){
     this._renderer2.setStyle(el.nativeElement, "width", `${size}px`)
     this._renderer2.setStyle(el.nativeElement, "height", `${size}px`)
-    this._renderer2.setStyle(el.nativeElement, "background", `${size}`)
+    this._renderer2.setStyle(el.nativeElement, "background", `${color}`)
   }
 
 }

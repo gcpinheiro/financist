@@ -1,13 +1,11 @@
-<div class="container">
-  <div class="menu">
-    <img src="assets/images/icons/menu.svg" alt="">
-  </div>
+<div class="container" [@containerState]="showAnimation">
   <div class="logo">
     <img src="assets/images/logos/logo-teste.svg" alt="" [routerLink]="'/home'">
   </div>
   <div class="options">
     <cards pathIcon="assets/images/icons/dashboard.svg" page="Dashboard" [routerLink]="'/home'" [routerLinkActive]="'is-active'"></cards>
-    <cards pathIcon="assets/images/icons/documents.svg" page="Cadastrar contas" [routerLink]="'/register-account'" [routerLinkActive]="'is-active'"></cards>
+    <cards pathIcon="assets/images/icons/writing.svg" page="Cadastrar contas" [routerLink]="'/register-account'" [routerLinkActive]="'is-active'"></cards>
+    <cards pathIcon="assets/images/icons/documents.svg" page="Visualizar contas" [routerLink]="'/viwe-accounts'" [routerLinkActive]="'is-active'"></cards>
     <cards pathIcon="assets/images/icons/chart-icon.svg" page="Indicadores"> [routerLinkActive]="'is-active'"</cards>
     <cards pathIcon="assets/images/icons/logout.svg" page="Sair" (click)="logout()"></cards>
   </div>

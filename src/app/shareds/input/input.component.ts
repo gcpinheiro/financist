@@ -45,7 +45,7 @@ export class InputComponent implements OnInit {
   }
 
   mouseOver(){
-    var icon =  this.asIcon.nativeElement;
+    let icon =  this.asIcon.nativeElement;
     if(this.chooseType === 'password'){
       this._renderer2.setStyle(icon, "transform", "scale(1.1)");
     }
