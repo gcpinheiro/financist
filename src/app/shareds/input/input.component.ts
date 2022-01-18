@@ -9,7 +9,7 @@ import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef, Rendere
 export class InputComponent implements OnInit {
 
   @ViewChild('icon') asIcon: ElementRef;
-  @Input() type = "";
+  @Input() type = "email";
   @Input() chooseType = "";
   @Input() placeholder = '';
   @Input() errorMensagem = '';

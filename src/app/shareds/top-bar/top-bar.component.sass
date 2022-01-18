@@ -33,35 +33,67 @@
     height: 80%
     display: flex
     flex-direction: row
-    justify-content: space-between
+    justify-content: space-around
     align-items: center
 
-    span
-      font-weight: 600
-      font-size: 16px
+    .card
+      width: 40%
+      height: 65%
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      align-items: center
+      border-radius: 4px
+      // box-shadow: 0 14px 21px 0 rgb(0, 0, 0, 6%)
+
+      span
+        font-weight: 600
+        font-size: 14px
+
+      span:nth-child(1)
+        color:$color-dark
+
+      .meta
+        color: $color-green-basic
+
+      .gastos
+        color: $color-alert-primary
 
   .profile
+    width: 20%
+    height: 80%
     display: flex
     flex-direction: row
     align-items: center
     justify-content: space-between
-    width: 22%
 
     span
-      font-size: 16px
+      font-size: 14px
+      font-weight: 600
+      color: $color-dark
 
-    .card-image
-      width: 60px
-      height: 60px
-      border-radius: 50%
+    .boas-vindas
+      width: 80%
+      height: 70%
       display: flex
       flex-direction: row
-      justify-content: center
       align-items: center
-      background: $color-primary
+
+      .texts
+        height: 60%
+        width: 90%
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: start
+        // text-overflow: ellipsis
+        span
+          font-size: 12px
+
 
       img
-        width: 100%
+        width: 18%
+        margin-left: 10%
 
     .button-dropdown
       cursor: pointer

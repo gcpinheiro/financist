@@ -1,1 +1,15 @@
-<button>
+<button [disabled]="desabilitado" class="button" [ngClass]="tema" (click)="disparaAcao()"  [style.width]="setWidth()">
+  <ng-container *ngIf="carregando else conteudoBotao">
+    <!-- <load-solid [visivel]="true" tipo="solido" tamanho="load-xs-pequeno" class="load">
+    </load-solid> -->
+  </ng-container>
+
+  <ng-template #conteudoBotao>
+    <div [class]="classContainer">
+      <img [src]="pathIcon" alt="" *ngIf="stateIcon" [style.margin-right]="marginIcon" >
+      <div class="content">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </ng-template>
+</button>

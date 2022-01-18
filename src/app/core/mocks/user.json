@@ -3,17 +3,20 @@
     {
       "email": "egcastro96@gmail.com",
       "name": "Gabriel Castro",
-      "meta": 2500
+      "meta": 0,
+      "gastoMensal": 0
     },
     {
       "email": "mrcm1975@gmail.com",
       "name": "Maria Rosana",
-      "meta": 3500
+      "meta": 3500,
+      "gastoMensal": 852.83
     },
     {
       "email": "hermanodecastro@gmail.com",
       "name": "Hermano de Castro",
-      "meta": 4500
+      "meta": 4500,
+      "gastoMensal": 762.21
     }
   ]
 

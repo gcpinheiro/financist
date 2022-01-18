@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FixedAccountsComponent } from './features/fixed-accounts/fixed-accounts.component';
 import { HomeComponent } from './features/home/home.component';
+import { IndicatorsComponent } from './features/indicators/indicators.component';
 import { LoginComponent } from './features/login/login.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
 import { RegisterAccountsComponent } from './features/register-accounts/register-accounts.component';
@@ -30,8 +31,12 @@ const routes: Routes = [
     component: RegisterAccountsComponent
   },
   {
-    path: 'viwe-accounts',
+    path: 'view-accounts',
     component: RegisterAccountsComponent
+  },
+  {
+    path: 'indicators',
+    component: IndicatorsComponent
   },
   {
     path: '**',

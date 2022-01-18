@@ -3,13 +3,25 @@
     <img [src]="iconStateLeftBar" alt="">
   </div>
   <div class="box-goal">
-    <span>Meta de gastos mensais: {{data?.meta | currency: "BRL"}}</span>
-    <circle-progress-bar></circle-progress-bar>
+    <div class="card">
+      <span>Meta de gasto mensal: </span>
+      <span class="meta">{{data?.meta | currency: "BRL"}}</span>
+    </div>
+
+    <div class="card">
+      <span>Gasto atual: </span>
+      <span class="gastos">{{data?.gastoMensal | currency: "BRL"}}</span>
+    </div>
+
+    <!-- <circle-progress-bar></circle-progress-bar> -->
   </div>
   <div class="profile">
-    <span>{{data?.name}}</span>
-    <div class="card-image">
-      <img [src]="icon" alt="">
+    <div class="boas-vindas">
+      <div class="texts">
+        <span>{{turno}}</span>
+        <span>{{data?.name}}</span>
+      </div>
+      <img [src]="icon()" alt="">
     </div>
     <img src="assets/images/icons/arrow-down.svg" alt="" class="button-dropdown">
   </div>

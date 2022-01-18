@@ -27,6 +27,7 @@ import localePt from '@angular/common/locales/pt';
 import {registerLocaleData} from '@angular/common';
 import { ViewAccountsComponent } from './features/view-accounts/view-accounts.component';
 import { ButtonComponent } from './shareds/button/button.component';
+import { IndicatorsComponent } from './features/indicators/indicators.component';
 registerLocaleData(localePt)
 
 
@@ -48,6 +49,7 @@ registerLocaleData(localePt)
     RegisterAccountsComponent,
     ViewAccountsComponent,
     ButtonComponent,
+    IndicatorsComponent,
 
   ],
   imports: [

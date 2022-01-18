@@ -10,7 +10,8 @@ import { LeftBarService } from '../left-bar/left-bar.service';
 export class TopBarComponent implements OnInit {
   data: any;
   nome = "Gabriel Castro";
-  sexo = "M";
+  hora = "manha";
+  turno:string;;
   state = false;
   constructor( private _leftBarService: LeftBarService ) { }
 
@@ -22,8 +23,25 @@ export class TopBarComponent implements OnInit {
 
   }
 
-  public get icon(){
-    return this.sexo == 'M' ? 'assets/images/icons/user-man.svg': 'assets/images/icons/user-woman.svg'
+  public icon(){
+    if(this?.hora === 'manha'){
+      this.turno = 'Bom dia,'
+      return 'assets/images/icons/morning.svg'
+    }
+
+    else if(this?.hora === 'tarde'){
+      this.turno = 'Boa tarde,';
+      return 'assets/images/icons/sunset3.svg'
+    }
+
+    else if(this?.hora === 'noite'){
+      this.turno = 'Boa noite,';
+      return 'assets/images/icons/moon.svg'
+    }
+
+    else{
+      return ''
+    }
   }
 
   public get iconStateLeftBar(){
