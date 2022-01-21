@@ -1,5 +1,6 @@
 @import ./../../core/styles/themes
 @import ./../../core/styles/animation
+@import ./../../core/styles/medias
 
 .container
   width: 100%
@@ -8,8 +9,7 @@
   flex-direction: row
   justify-content: center
   align-items: center
-  background: linear-gradient(90.21deg, #77C9D4 0.15%, rgba(87, 188, 144, 0.5) 99.78%)
-  background: $color-neutral-secondary
+  background: $color-neutral-primary
 
   .box
     width: 65%
@@ -20,6 +20,14 @@
     flex-direction: row
     animation: fadeIn .7s ease-in
 
+    // @media screen and (min-width: 500px) and (max-width: 650px)
+    //   display: flex
+    //   flex-direction: column
+    //   width: 90%
+    //   height: 95%
+    //   background: red
+
+
     .background-image
       width: 60%
       height: 100%
@@ -27,6 +35,13 @@
       background-size: cover
       border-top-left-radius: 8px
       border-bottom-left-radius: 8px
+
+      // @media screen and (min-width: 500px) and (max-width: 650px)
+      //   width: 100%
+      //   height: 30%
+      //   border-top-left-radius: 8px
+      //   border-bottom-left-radius: 0px
+      //   border-top-right-radius: 8px
 
     form
       width: 40%
@@ -41,9 +56,20 @@
       align-items: center
       box-sizing: border-box
 
+      // @media screen and (min-width: 500px) and (max-width: 650px)
+      //   width: 100%
+      //   height: 70%
+      //   border-top-right-radius: 0px
+      //   border-bottom-right-radius: 8px
+      //   border-bottom-left-radius: 8px
+
       img
         width: 40%
         margin-top: 5%
+
+        // @media screen and (min-width: 500px) and (max-width: 650px)
+        //   width: 25%
+        //   margin-top: 2%
 
       .inputs
         width: 80%
@@ -52,7 +78,10 @@
         flex-direction: column
         justify-content: space-between
         margin-top: 10%
-        box-sizing: border-box
+
+        // @media screen and (min-width: 500px) and (max-width: 650px)
+        //   margin-top: 2%
+        //   width: 60%
 
       .buttons
         width: 80%
@@ -61,6 +90,10 @@
         flex-direction: row
         justify-content: space-between
         align-items: center
+
+        // @media screen and (min-width: 500px) and (max-width: 650px)
+        //   margin-top: 2%
+        //   width: 60%
 
         .access, .register
           width: 45%
@@ -73,7 +106,7 @@
 
           &:disabled
             background-color: $color-disabled
-            color: $color-dark
+            color: $color-neutral-secondary
 
         .access:hover
           opacity: .9
@@ -87,7 +120,7 @@
           font-weight: 500
 
         .register:hover
-          box-shadow: 0 1px 1px 2px $color-neutral-secondary
+          box-shadow: 0 1px 1px 2px $color-neutral-primary
 
       .login-social-media
         display: flex
