@@ -8,10 +8,11 @@ import { LeftBarService } from '../left-bar/left-bar.service';
   styleUrls: ['./top-bar.component.sass']
 })
 export class TopBarComponent implements OnInit {
+  date = new Date();
   data: any;
   nome = "Gabriel Castro";
-  hora = "manha";
-  turno:string;;
+  frase = '';
+  turno = '';
   state = false;
   constructor( private _leftBarService: LeftBarService ) { }
 
@@ -21,22 +22,24 @@ export class TopBarComponent implements OnInit {
       this.data = JSON.parse(response);
     }
 
+    this.verifyDate();
+
   }
 
   public icon(){
-    if(this?.hora === 'manha'){
-      this.turno = 'Bom dia,'
+    if(this?.turno === 'manha'){
+      this.frase = 'Bom dia,'
       return 'assets/images/icons/morning.svg'
     }
 
-    else if(this?.hora === 'tarde'){
-      this.turno = 'Boa tarde,';
+    else if(this?.turno === 'tarde'){
+      this.frase = 'Boa tarde,';
       return 'assets/images/icons/sunset3.svg'
     }
 
-    else if(this?.hora === 'noite'){
-      this.turno = 'Boa noite,';
-      return 'assets/images/icons/moon.svg'
+    else if(this?.turno === 'noite'){
+      this.frase = 'Boa noite,';
+      return 'assets/images/icons/night.svg'
     }
 
     else{
@@ -55,6 +58,21 @@ export class TopBarComponent implements OnInit {
   public toggleLeftBar(){
     this.state = !this.state;
     this._leftBarService.changeState(this.state);
+  }
+
+  public verifyDate(){
+    let hour = this.date.getHours()
+    if(hour > 0 && hour < 12){
+      this.turno = 'manha'
+    }
+
+    else if(hour > 12 && hour < 18){
+      this.turno = 'tarde'
+    }
+
+    else if(hour > 18 && hour < 24){
+      this.turno = 'noite'
+    }
   }
 
 }
