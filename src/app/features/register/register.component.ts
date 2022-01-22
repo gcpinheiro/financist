@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  isDisabled: boolean = true;
+  isDisabled: boolean = false;
   constructor() { }
 
   ngOnInit(): void {

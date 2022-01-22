@@ -9,9 +9,9 @@ export class ButtonComponent implements OnInit {
 
     @Output() acao = new EventEmitter();
     @Input() carregando = false;
-    @Input() desabilitado = false;
+    @Input() disabled = false;
     @Input() exibeEmBloco = false;
-    @Input() tipo = 'primary';
+    @Input() tipo = '';
     @Input() width = '';
     @Input() pathIcon = '';
     @Input() onlyIcon = false;
@@ -22,7 +22,7 @@ export class ButtonComponent implements OnInit {
     ngOnInit(): void {}
 
     public disparaAcao(): void {
-      if (!this.desabilitado) {
+      if (!this.disabled) {
         this.acao.emit({});
       }
     }
@@ -60,6 +60,10 @@ export class ButtonComponent implements OnInit {
 
     public get classContainer() {
       return this.onlyIcon ? 'only-icon' : 'container';
+    }
+
+    public get sizeOnlyIcon(){
+      return this.onlyIcon ? '32px' : '0px';
     }
 
 }

@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FixedAccountsComponent } from './features/fixed-accounts/fixed-accounts.component';
 import { HomeComponent } from './features/home/home.component';
 import { IndicatorsComponent } from './features/indicators/indicators.component';
 import { LoginComponent } from './features/login/login.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
 import { RegisterAccountsComponent } from './features/register-accounts/register-accounts.component';
 import { RegisterComponent } from './features/register/register.component';
-import { VariedAccountsComponent } from './features/varied-accounts/varied-accounts.component';
+import { ViewFinancialAccountComponent } from './features/view-financial-account/view-financial-account.component';
 
 const routes: Routes = [
   {
@@ -31,8 +30,8 @@ const routes: Routes = [
     component: RegisterAccountsComponent
   },
   {
-    path: 'view-accounts',
-    component: RegisterAccountsComponent
+    path: 'view-financial-accounts',
+    component: ViewFinancialAccountComponent
   },
   {
     path: 'indicators',

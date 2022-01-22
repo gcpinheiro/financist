@@ -10,8 +10,8 @@
         <app-input type="password" placeholder="Confirme sua senha"></app-input>
       </div>
       <div class="buttons">
-        <button class="access -button" [disabled]="!isDisabled">Criar conta</button>
-        <button class="register -button" [routerLink]="'/login'">Voltar</button>
+        <btn tipo="primary" [disabled]="isDisabled">Criar conta</btn>
+        <btn tipo="tertiary" [routerLink]="'/login'">Voltar</btn>
       </div>
     </form>
   </div>

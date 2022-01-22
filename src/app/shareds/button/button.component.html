@@ -1,4 +1,4 @@
-<button [disabled]="desabilitado" class="button" [ngClass]="tema" (click)="disparaAcao()"  [style.width]="setWidth()">
+<button [disabled]="disabled" class="button" [ngClass]="tema" (click)="disparaAcao()">
   <ng-container *ngIf="carregando else conteudoBotao">
     <!-- <load-solid [visivel]="true" tipo="solido" tamanho="load-xs-pequeno" class="load">
     </load-solid> -->
@@ -6,7 +6,7 @@
 
   <ng-template #conteudoBotao>
     <div [class]="classContainer">
-      <img [src]="pathIcon" alt="" *ngIf="stateIcon" [style.margin-right]="marginIcon" >
+      <img [src]="pathIcon" alt="" *ngIf="stateIcon" class="icon">
       <div class="content">
         <ng-content></ng-content>
       </div>

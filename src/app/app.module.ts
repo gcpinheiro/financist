@@ -13,8 +13,6 @@ import { LeftBarComponent } from './shareds/left-bar/left-bar.component';
 import { ButtonIconComponent } from './shareds/button-icon/button-icon.component';
 import { TopBarComponent } from './shareds/top-bar/top-bar.component';
 import { CircleProgressBarComponent } from './shareds/circle-progress-bar/circle-progress-bar.component';
-import { FixedAccountsComponent } from './features/fixed-accounts/fixed-accounts.component';
-import { VariedAccountsComponent } from './features/varied-accounts/varied-accounts.component';
 import { CardsComponent } from './shareds/left-bar/components/cards/cards.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
 import { RegisterAccountsComponent } from './features/register-accounts/register-accounts.component';
@@ -25,9 +23,9 @@ import { ModalComponent } from './shareds/modal/modal.component';
 import { LOCALE_ID } from '@angular/core';
 import localePt from '@angular/common/locales/pt';
 import {registerLocaleData} from '@angular/common';
-import { ViewAccountsComponent } from './features/view-accounts/view-accounts.component';
 import { ButtonComponent } from './shareds/button/button.component';
 import { IndicatorsComponent } from './features/indicators/indicators.component';
+import { ViewFinancialAccountComponent } from './features/view-financial-account/view-financial-account.component';
 registerLocaleData(localePt)
 
 
@@ -42,14 +40,12 @@ registerLocaleData(localePt)
     ButtonIconComponent,
     TopBarComponent,
     CircleProgressBarComponent,
-    FixedAccountsComponent,
-    VariedAccountsComponent,
     CardsComponent,
     PageNotFoundComponent,
     RegisterAccountsComponent,
-    ViewAccountsComponent,
     ButtonComponent,
     IndicatorsComponent,
+    ViewFinancialAccountComponent,
 
   ],
   imports: [

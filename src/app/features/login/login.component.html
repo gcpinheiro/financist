@@ -8,15 +8,25 @@
         <app-input type="password" placeholder="Senha" [(ngModel)]="user.password" name="senha" ngDefaultControl></app-input>
       </div>
       <div class="buttons">
-        <!-- <btn>Acessar</btn>
-        <btn tipo="secondary">Cadastre-se</btn> -->
-        <button class="access -button" [disabled]="!isDisabled" (click)="submit()">Acessar</button>
-        <button class="register -button" [routerLink]="'/register'">Cadastre-se</button>
+        <btn tipo="primary" [disabled]="isDisabled" (click)="submit()">Acessar</btn>
+        <btn tipo="tertiary" [routerLink]="'/register'">Cadastre-se</btn>
       </div>
       <div class="login-social-media">
-        <app-button-icon pathImage="assets/images/icons/google.svg"  width="20px"></app-button-icon>
-        <app-button-icon pathImage="assets/images/icons/twitter.svg" width="25px"></app-button-icon>
-        <app-button-icon pathImage="assets/images/icons/facebook.svg" width="25px"></app-button-icon>
+        <btn
+          pathIcon="assets/images/icons/google.svg"
+          [onlyIcon]="true"
+          >
+        </btn>
+        <btn
+          pathIcon="assets/images/icons/twitter.svg"
+          [onlyIcon]="true"
+          >
+        </btn>
+        <btn
+          pathIcon="assets/images/icons/facebook.svg"
+          [onlyIcon]="true"
+          >
+        </btn>
       </div>
     </form>
   </div>

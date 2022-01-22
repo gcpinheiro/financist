@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
     password: ''
   };
   statusModal = false;
-  isDisabled: boolean = true;
+  isDisabled: boolean = false;
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
   constructor(
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
     if(response){
       this._router.navigateByUrl('/home');
     }
-    else{
+    else if(this.isDisabled == false && response == false){
      this.statusModal = !this.statusModal;
     }
   }
