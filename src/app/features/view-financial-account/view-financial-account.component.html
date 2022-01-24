@@ -6,8 +6,38 @@
   </div>
   <div class="content scrollbar">
     <div class="box-content">
-    </div>
-    <div class="box-graphics">
+      <div class="search-for-date">
+        <div class="box-date-search">
+          <label for="search-date">Filtrar por mês: </label>
+          <input type="date">
+        </div>
+      </div>
+      <table>
+        <tr class="first-tr">
+          <th>Item</th>
+          <th>Data da compra</th>
+          <th>Valor</th>
+          <th colspan="2">Tipo da compra</th>
+          <th>Parcela Atual</th>
+          <th>Qtd. Parcelas</th>
+          <th>Categoria</th>
+          <th>Data de pagamento</th>
+        </tr>
+        <ng-container *ngFor="let item of data; let odd = odd">
+          <tr [class.odd]="odd">
+            <td>{{item.nome}}</td>
+            <td>{{item.dataCompra}}</td>
+            <td>{{item.valor | currency: 'BRL'}}</td>
+            <td colspan="2">{{item.tipoCompra}}</td>
+            <td>{{item.parcelaAtual}}</td>
+            <td>{{item.qtdParcelas}}</td>
+            <td>{{item.categoria}}</td>
+            <td>{{item.dataPagamento}}</td>
+          </tr>
+        </ng-container>
+
+
+      </table>
     </div>
   </div>
 </main>

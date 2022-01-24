@@ -28,87 +28,99 @@
       height: 85%
       padding: 16px
       box-sizing: border-box
+      display: flex
+      justify-content: center
 
       .box-content
-        width: 100%
+        width: 95%
+        height: 1000px
         display: flex
-        flex-direction: row
-        justify-content: space-evenly
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
         border-radius: 8px
-        margin-top: 5%
 
-        .cards
-          width: 18%
-          height: 80px
-          display: flex
-          flex-direction: column
-          justify-content: space-around
-          border-right: 1px solid #DDDDDD
-
-          .numbers
-            width: 100%
-
-            span
-              font-size: 24px
-              font-weight: 700
-              color: $color-primary
-
-          .indicators
-            width: 100%
-            height: 50%
-            display: flex
-            flex-direction: row
-            align-items: flex-start
-            justify-content: flex-start
-
-            .text
-              height: 100%
-              display: flex
-              flex-direction: column
-              justify-content: space-around
-
-              span
-                font-size: 14px
-                font-weight: 400
-                color: #8E8E8E
-
-              .info
-                display: flex
-                flex-direction: row
-                width: 100%
-
-                span
-                  font-size: 10px
-                  color: #a3a3a3
-
-                img
-                  margin-left: 5%
-
-        .cards:nth-child(4)
-          width: 22%
-          border-right: none
-
-      .box-graphics
-        display: flex
-        flex-direction: row
-        width: 100%
-        margin-top: 5%
-
-        .graphic
-          width: 45%
-          height: 290px
-          border-radius: 8px
+        .search-for-date
+          width: 100%
+          height: 5%
+          margin: 2% 0
           display: flex
           flex-direction: row
-          justify-content: center
-          padding-left: 3%
-          box-sizing: border-box
+          justify-content: flex-end
 
-          img
-            padding: 20px
+          .box-date-search
+            width: 30%
+            display: flex
+            flex-direction: row
+            justify-content: flex-end
+            align-items: flex-end
 
-        .graphic:nth-child(2)
-          margin-left: 5%
+            input
+              width: 50%
+
+            input::-webkit-calendar-picker-indicator
+              cursor: pointer
+
+
+            label
+              margin-right: 5%
+              color: $color-primary
+
+
+        table
+          width: 100%
+          // border: 1px solid $color-neutral-secondary
+          border-collapse: collapse
+          box-shadow: 0 4px 8px $color-neutral-secondary
+          padding: 0 0 0 2%
+          border-top-left-radius: 8px
+          border-top-right-radius: 8px
+
+          th
+            background: $color-primary
+            color: $color-white
+            text-align: center
+            font-size: 14px
+
+          th:last-child
+            border-top-right-radius: 8px
+
+          th:first-child
+            border-top-left-radius: 8px
+
+          tr
+            border-bottom: 1px solid $color-neutral-secondary
+            border-collapse: collapse
+            height: 40px
+            font-size: 12px
+
+          td
+            text-align: center
+
+          td:first-child
+            color: $color-primary-dark
+            font-weight: 600
 
 
 
+.odd
+  background: $color-neutral-primary
+  color: $color-black
+
+input, select
+  border: 1px solid $color-neutral-secondary
+  border-radius: 8px
+  padding-left: 10px
+  padding-right: 5px
+  box-sizing: border-box
+  height: 32px
+
+input:focus, select:focus
+  box-shadow:  0px 1px 8px $color-primary-light
+  outline: 0
+  border: 1px solid $color-primary
+
+textarea:focus
+  box-shadow:  0 0 0 0
+  outline: 0
+  border: none

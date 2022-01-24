@@ -62,15 +62,15 @@ export class TopBarComponent implements OnInit {
 
   public verifyDate(){
     let hour = this.date.getHours()
-    if(hour > 0 && hour < 12){
+    if(hour >= 0 && hour < 12){
       this.turno = 'manha'
     }
 
-    else if(hour > 12 && hour < 18){
+    if(hour >= 12 && hour < 18){
       this.turno = 'tarde'
     }
 
-    else if(hour > 18 && hour < 24){
+    if(hour >= 18 && hour < 24){
       this.turno = 'noite'
     }
   }

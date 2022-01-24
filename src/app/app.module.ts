@@ -16,7 +16,7 @@ import { CircleProgressBarComponent } from './shareds/circle-progress-bar/circle
 import { CardsComponent } from './shareds/left-bar/components/cards/cards.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
 import { RegisterAccountsComponent } from './features/register-accounts/register-accounts.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from './shareds/modal/modal.module';
 import { ModalComponent } from './shareds/modal/modal.component';
@@ -55,7 +55,9 @@ registerLocaleData(localePt)
     FormsModule,
     HttpClientModule,
     ModalModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ModalComponent, {
     provide: LOCALE_ID,

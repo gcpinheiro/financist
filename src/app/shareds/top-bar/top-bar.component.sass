@@ -1,4 +1,5 @@
 @import ./../../core/styles/themes
+@import ./../../core/styles/medias
 
 .container
   width: 100%
@@ -58,6 +59,9 @@
       .gastos
         color: $color-feedback-error
 
+    @include largeDesktop()
+      height: 60%
+
   .profile
     width: 30%
     height: 80%
@@ -75,7 +79,7 @@
 
     .boas-vindas
       width: 60%
-      height: 70%
+      height: 65%
       display: flex
       flex-direction: row
       align-items: center
@@ -106,5 +110,7 @@
       width: 5%
       padding: 10px 0
 
-
+    @include largeDesktop()
+      height: 55%
+      width: 20%
 
