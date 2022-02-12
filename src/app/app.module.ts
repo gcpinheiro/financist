@@ -26,6 +26,7 @@ import {registerLocaleData} from '@angular/common';
 import { ButtonComponent } from './shareds/button/button.component';
 import { IndicatorsComponent } from './features/indicators/indicators.component';
 import { ViewFinancialAccountComponent } from './features/view-financial-account/view-financial-account.component';
+import { TopBarModule } from './shareds/top-bar/top-bar.module';
 registerLocaleData(localePt)
 
 
@@ -38,7 +39,6 @@ registerLocaleData(localePt)
     RegisterComponent,
     LeftBarComponent,
     ButtonIconComponent,
-    TopBarComponent,
     CircleProgressBarComponent,
     CardsComponent,
     PageNotFoundComponent,
@@ -57,7 +57,8 @@ registerLocaleData(localePt)
     ModalModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TopBarModule
   ],
   providers: [ModalComponent, {
     provide: LOCALE_ID,

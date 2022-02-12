@@ -1,0 +1,21 @@
+<div class="container">
+  <div (click)="toggleDropdownState()" #sizeAction>
+    <ng-content select="[action-dropdown]">
+
+    </ng-content>
+  </div>
+  <div class="box-dropdown" *ngIf="showDropdown"
+    [style.left]="alignLeft"
+    [style.right]="alignRight"
+    [style.bottom]="alignBottom"
+    [style.top]="alignTop"
+    [style.margin-top]="marginTop"
+    [style.margin-bottom]="marginBottom"
+    #sizeContainer
+  >
+    <ng-content class="content" select="[dropdown-container]">
+
+    </ng-content>
+  </div>
+</div>
+

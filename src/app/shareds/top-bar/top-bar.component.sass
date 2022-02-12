@@ -69,7 +69,7 @@
     flex-direction: row
     align-items: center
     justify-content: space-between
-    padding-left: 5%
+    padding-left: 3%
     box-sizing: border-box
 
     span
@@ -78,7 +78,7 @@
       color: $color-neutral-secondary
 
     .boas-vindas
-      width: 60%
+      width: 50%
       height: 65%
       display: flex
       flex-direction: row
@@ -103,12 +103,27 @@
           text-overflow: ellipsis
 
       .icon
-        width: 30%
+        width: 27%
 
-    .button-dropdown
+    .box-icon
+      width: 30px
+      height: 30px
+      border-radius: 100%
+      background-color: $color-primary
       cursor: pointer
-      width: 5%
-      padding: 10px 0
+      display: flex
+      justify-content: center
+      align-items: center
+
+      img
+        width: 14px
+
+    .dropdown-container
+      width: 200px
+      height: 240px
+      background: $color-white
+      box-shadow: 0 4px 12px $color-neutral-secondary
+      border-radius: 8px
 
     @include largeDesktop()
       height: 55%
