@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import user from './../mocks/user.json'
+import User from './../mocks/user.json'
 import { BehaviorSubject } from 'rxjs';
 import { responseUsers, Users } from '../types/users_d';
 
@@ -19,7 +19,7 @@ export class AuthService {
 */
 
 public login(user: any){
-  const endpoint = 'http://localhost:3000/login';
+  const endpoint = user;
   return this._httpClient.post(endpoint, user);
   // const response = user.users.find(user => user.email == email);
   // if(response){
