@@ -10,7 +10,7 @@ import { LeftBarService } from '../left-bar/left-bar.service';
 export class TopBarComponent implements OnInit {
   date = new Date();
   data: any;
-  nome = "Gabriel Castro";
+  nome = '-';
   frase = '';
   turno = '';
   state = false;
@@ -21,9 +21,7 @@ export class TopBarComponent implements OnInit {
     if(response){
       this.data = JSON.parse(response);
     }
-
     this.verifyDate();
-
   }
 
   public icon(){
@@ -73,6 +71,11 @@ export class TopBarComponent implements OnInit {
     if(hour >= 18 && hour < 24){
       this.turno = 'noite'
     }
+  }
+
+  public get username(){
+    const username = localStorage.getItem('username');
+    return username? username : '-';
   }
 
 }

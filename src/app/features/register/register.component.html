@@ -4,13 +4,13 @@
     <form action="#">
       <img src="assets/images/logos/logo-teste.svg" alt="">
       <div class="inputs">
-        <app-input type="email" placeholder="Email"></app-input>
-        <app-input type="email" placeholder="Confirme sua email"></app-input>
-        <app-input type="password" placeholder="Senha"></app-input>
-        <app-input type="password" placeholder="Confirme sua senha"></app-input>
+        <app-input type="email" placeholder="email" name="validatorForms.email" [model]="validatorForms.email" (keyup)="handleChangeModel($event)"></app-input>
+        <app-input type="email" placeholder="Confirme sua email" name="confirmEmail" [model]="validatorForms.confirmEmail"></app-input>
+        <app-input type="password" placeholder="Senha" name="password" [model]="validatorForms.password"></app-input>
+        <app-input type="password" placeholder="Confirme sua senha" name="confirmPassword" [model]="validatorForms.confirmPassword"></app-input>
       </div>
       <div class="buttons">
-        <btn tipo="primary" [disabled]="isDisabled">Criar conta</btn>
+        <btn tipo="primary" [disabled]="isDisabled" (click)="submit()">Criar conta</btn>
         <btn tipo="secondary" [routerLink]="'/login'">Voltar</btn>
       </div>
     </form>

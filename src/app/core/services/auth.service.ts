@@ -18,14 +18,16 @@ export class AuthService {
 *@return boolean Retorna o estado da operação
 */
 
-public login(email: string): boolean{
-  const response = user.users.find(user => user.email == email);
-  if(response){
-    localStorage.setItem("user", JSON.stringify(response));
-    return true;
-  }
-  else{
-    return false;
-  }
+public login(user: any){
+  const endpoint = 'http://localhost:3000/login';
+  return this._httpClient.post(endpoint, user);
+  // const response = user.users.find(user => user.email == email);
+  // if(response){
+  //   localStorage.setItem("user", JSON.stringify(response));
+  //   return true;
+  // }
+  // else{
+  //   return false;
+  // }
 }
 }

@@ -1,0 +1,32 @@
+{
+  "login": [
+    {
+      "id": 1,
+      "email": "egcastro96@gmail.com",
+      "username": "Gabriel Castro",
+      "meta": 2200,
+      "gastoMensal": 1756.45
+    },
+    {
+      "id": 2,
+      "email": "mrcm1975@gmail.com",
+      "username": "Maria Rosana",
+      "meta": 3500,
+      "gastoMensal": 852.83
+    },
+    {
+      "id": 3,
+      "email": "hermanodecastro@gmail.com",
+      "username": "Hermano de Castro",
+      "meta": 4500,
+      "gastoMensal": 762.21
+    }
+  ],
+  "register-user": [
+    {
+      "email": "",
+      "password": "",
+      "id": 1
+    }
+  ]
+}

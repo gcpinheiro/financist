@@ -4,6 +4,8 @@ import { AuthService } from 'src/app/core/services/auth.service';
 import { ModalComponent } from 'src/app/shareds/modal/modal.component';
 import { ModalService } from 'src/app/shareds/modal/modal.service';
 import {FormControl, Validators} from '@angular/forms';
+import { LoginService } from './login.service';
+import { Users } from 'src/app/core/types/users_d';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  user = {
+  user: Users = {
     email: '',
     password: ''
   };
@@ -24,6 +26,7 @@ export class LoginComponent implements OnInit {
     private _authService: AuthService,
     private _router: Router,
     private _modalService: ModalService,
+    private _loginService: LoginService,
     @Inject(ModalComponent) private _modal: ModalComponent
     ) {
   }
@@ -31,14 +34,22 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public submit(){
-    const response = this._authService.login(this.user.email);
-    if(response){
-      this._router.navigateByUrl('/home');
+  public async submit(){
+
+    try{
+      await this._loginService.login(this.user.email);
+      this._router.navigate([''])
     }
-    else if(this.isDisabled == false && response == false){
-     this.statusModal = !this.statusModal;
+    catch(error){
+      console.error(error)
     }
+
+    // if(response){
+    //   this._router.navigateByUrl('/home');
+    // }
+    // else if(this.isDisabled == false && response == false){
+    //  this.statusModal = !this.statusModal;
+    // }
   }
 
 }

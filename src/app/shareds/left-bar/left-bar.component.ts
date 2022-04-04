@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LeftBarService } from './left-bar.service';
 import {
@@ -8,7 +8,6 @@ import {
   animate,
   transition,
 } from '@angular/animations';
-import { TopBarComponent } from '../top-bar/top-bar.component';
 
 @Component({
   selector: 'app-left-bar',
@@ -37,7 +36,8 @@ export class LeftBarComponent implements OnInit {
 
   public logout(){
     localStorage.removeItem("user");
-    this._router.navigateByUrl('');
+    localStorage.removeItem("username");
+    this._router.navigate(['/login']);
   }
 
   public get showAnimation(){

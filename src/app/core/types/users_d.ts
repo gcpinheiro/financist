@@ -1,7 +1,7 @@
 export interface Users{
   email: string;
-  name: string;
-  meta: number;
+  username?: string;
+  password: string;
 }
 
 export interface responseUsers{

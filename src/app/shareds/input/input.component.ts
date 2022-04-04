@@ -1,5 +1,6 @@
 import { style } from '@angular/animations';
-import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef, Renderer2, NgModule, Output, EventEmitter } from '@angular/core';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -10,9 +11,16 @@ export class InputComponent implements OnInit {
 
   @ViewChild('icon') asIcon: ElementRef;
   @Input() type = "email";
+  @Input() model: any;
+  @Input() name = '';
   @Input() chooseType = "";
   @Input() placeholder = '';
   @Input() errorMensagem = '';
+
+  @Output() modelChange = new EventEmitter<any>();
+  @Output() onKeyPress = new EventEmitter<any>();
+  teste: string;
+
   iconPath = 'assets/images/icons/eye-regular.svg';
   focus = false;
 
@@ -21,6 +29,11 @@ export class InputComponent implements OnInit {
   ngOnInit(): void {
     this.chooseType = this.type
   }
+
+  public handleChangeModel(event: any) {
+    this.modelChange.emit(event.target.value);
+    this.onKeyPress.emit();
+  };
 
   public get showIcon(){
     return this.type === 'password'? true : false;
@@ -59,7 +72,6 @@ export class InputComponent implements OnInit {
   }
 
   onFocus(){
-    console.log(this.focus)
     this.focus = !this.focus;
   }
 

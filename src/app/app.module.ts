@@ -7,16 +7,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './features/login/login.component';
 import { HomeComponent } from './features/home/home.component';
 import { RegisterComponent } from './features/register/register.component';
-// import { InputComponent } from './shareds/input/input.component';
 import { InputModule } from './shareds/input/input.module';
 import { LeftBarComponent } from './shareds/left-bar/left-bar.component';
 import { ButtonIconComponent } from './shareds/button-icon/button-icon.component';
-import { TopBarComponent } from './shareds/top-bar/top-bar.component';
 import { CircleProgressBarComponent } from './shareds/circle-progress-bar/circle-progress-bar.component';
 import { CardsComponent } from './shareds/left-bar/components/cards/cards.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
 import { RegisterAccountsComponent } from './features/register-accounts/register-accounts.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from './shareds/modal/modal.module';
 import { ModalComponent } from './shareds/modal/modal.component';
@@ -50,14 +48,12 @@ registerLocaleData(localePt)
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     InputModule,
-    FormsModule,
     HttpClientModule,
     ModalModule,
     BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
     TopBarModule
   ],
   providers: [ModalComponent, {
