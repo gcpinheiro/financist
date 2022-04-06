@@ -4,7 +4,7 @@
   "scripts": {
     "preinstall": "npm config set package-lock false",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
