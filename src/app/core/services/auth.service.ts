@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import User from './../mocks/user.json'
+import listUsers from './../mocks/user.json'
 import { BehaviorSubject } from 'rxjs';
 import { responseUsers, Users } from '../types/users_d';
 
@@ -18,16 +18,16 @@ export class AuthService {
 *@return boolean Retorna o estado da operação
 */
 
-public login(user: any){
-  const endpoint = user;
-  return this._httpClient.post(endpoint, user);
-  // const response = user.users.find(user => user.email == email);
-  // if(response){
-  //   localStorage.setItem("user", JSON.stringify(response));
-  //   return true;
-  // }
-  // else{
-  //   return false;
-  // }
+public login(user: string){
+  // const endpoint = user;
+  // return this._httpClient.post(endpoint, user);
+  const response = listUsers.users.find(data => data.email == user);
+  if(response){
+    localStorage.setItem("username", response.name);
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 }

@@ -37,7 +37,8 @@ export class LoginComponent implements OnInit {
   public async submit(){
 
     try{
-      await this._loginService.login(this.user.email);
+      // await this._loginService.login(this.user.email);
+      await this._authService.login(this.user.email);
       this._router.navigate([''])
     }
     catch(error){
