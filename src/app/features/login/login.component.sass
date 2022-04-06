@@ -10,6 +10,8 @@
   justify-content: center
   align-items: center
   background: $color-neutral-primary
+  animation: fadeIn 1.5s ease-in
+
 
   .box
     width: 65%
@@ -18,7 +20,6 @@
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.08)
     display: flex
     flex-direction: row
-    animation: fadeIn .7s ease-in
 
     @include galaxyFold()
       display: flex
@@ -45,7 +46,7 @@
       height: 100%
 
     @include desktop()
-      width: 80%
+      width: 95%
       height: 80%
 
     .background-image
@@ -79,14 +80,16 @@
 
       @include ipadSize()
         width: 100%
-        height: 40%
+        height: 45%
         border-top-left-radius: 0px
         border-bottom-left-radius: 0px
         border-top-right-radius: 0px
-        background-position-y: -150px
+        background-position-y: -50px
 
       @include desktop()
-        width: 65%
+        width: 55%
+        background-position: auto
+        background-size: cover
 
     form
       width: 40%
@@ -123,13 +126,13 @@
 
       @include ipadSize()
         width: 100%
-        height: 60%
+        height: 55%
         border-top-right-radius: 0px
         border-bottom-right-radius: 0px
         border-bottom-left-radius: 0px
 
       @include desktop()
-        width: 35%
+        width: 45%
 
       img
         width: 40%

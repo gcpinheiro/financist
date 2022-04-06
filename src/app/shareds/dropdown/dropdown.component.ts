@@ -33,17 +33,12 @@ export class DropdownComponent implements OnInit {
       this.alignLeft = '0px';
     }
     if (this.horizontalAlign === 'left') {
-      console.log(widthDropdownContainer)
-      console.log(widthDropdownAction)
       const result = widthDropdownContainer - widthDropdownAction;
-      console.log(result)
 
       this.alignRight = `${result}px`;
     }
     if (this.horizontalAlign === 'center') {
-      console.log(widthDropdownAction)
       const result = widthDropdownContainer / 2;
-      console.log(result)
       this.alignRight = `${result}px`;
     }
     if (this.verticalAlign === 'bottom') {

@@ -11,11 +11,9 @@ export class AuthGuardGuard implements CanActivate {
   canActivate( route: ActivatedRouteSnapshot,  state: RouterStateSnapshot): boolean {
    	const username = window.localStorage.getItem('username');
    	if(username){
-       console.log("ativou CanActivate")
    		return true;
    	}
    	else{
-      console.log("Não ativou CanActivate")
    		this.router.navigate(['login']);
    		return false;
    	}

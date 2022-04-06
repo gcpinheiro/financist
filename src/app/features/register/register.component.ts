@@ -34,19 +34,16 @@ export class RegisterComponent implements OnInit {
   }
 
   // public handleChangeModel(event: any, variable: any) {
-  //   console.log(`${variable}: `,event.target.value)
 
   // };
 
   public handleChangeModel(event: any) {
     this.modelChange.emit(event.target.value);
     this.onKeyPress.emit();
-    console.log(this.validatorForms.email)
   };
 
   public validaFormulario(): boolean{
     if(this.validatorForms.email == this.validatorForms.confirmEmail && this.validatorForms.password == this.validatorForms.confirmPassword){
-      console.log("Dados validados")
       this.registerFormSend.email = this.validatorForms.email;
       this.registerFormSend.password = this.validatorForms.password;
       return true;
@@ -57,7 +54,6 @@ export class RegisterComponent implements OnInit {
   public submit(){
     if(this.validaFormulario()){
       this.validaFormulario();
-      console.log(this.validatorForms)
       this._registerService.registerUser(this.registerFormSend);
     }
 

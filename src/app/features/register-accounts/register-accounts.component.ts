@@ -40,7 +40,6 @@ export class RegisterAccountsComponent implements OnInit {
   }
 
   public submit(){
-    console.log(this.data.value);
     this.data.reset()
   }
 
