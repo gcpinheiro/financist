@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterAccountsComponent implements OnInit {
 
-  data: FormGroup;
+  // data: FormGroup;
 
 
   // data = {
@@ -24,27 +24,27 @@ export class RegisterAccountsComponent implements OnInit {
 
   // }
 
-  constructor(private _router: Router, private _formBuilder: FormBuilder ) { }
+  constructor(private _router: Router ) { }
 
   ngOnInit(): void {
-    this.data = this._formBuilder.group({
-      nameAccount: [null],
-      valueAccount: [null],
-      accountType: [null],
-      category: [null],
-      hasInstallment: [null],
-      numberInstallment: [null],
-      purchaseDate: [null],
-      payday: [null],
-    })
+    // this.data = this._formBuilder.group({
+    //   nameAccount: [null],
+    //   valueAccount: [null],
+    //   accountType: [null],
+    //   category: [null],
+    //   hasInstallment: [null],
+    //   numberInstallment: [null],
+    //   purchaseDate: [null],
+    //   payday: [null],
+    // })
   }
 
   public submit(){
-    this.data.reset()
+    // this.data.reset()
   }
 
   public reset(){
-    this.data.reset()
+    // this.data.reset()
   }
 
   // public get valueQtdParcelas(){

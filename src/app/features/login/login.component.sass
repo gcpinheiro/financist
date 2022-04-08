@@ -15,7 +15,7 @@
 
   .box
     width: 65%
-    height: 75%
+    height: 85%
     border-radius: 8px
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.08)
     display: flex
@@ -47,7 +47,12 @@
 
     @include desktop()
       width: 95%
-      height: 80%
+      height: 85%
+
+    @include largeDesktop()
+      width: 95%
+      height: 85%
+
 
     .background-image
       width: 60%
@@ -102,6 +107,8 @@
       display: flex
       flex-direction: column
       align-items: center
+      padding-top: 5%
+      box-sizing: border-box
 
       @include galaxyFold()
         width: 100%
@@ -109,6 +116,7 @@
         border-top-right-radius: 0px
         border-bottom-right-radius: 0px
         border-bottom-left-radius: 0px
+        padding-top: 12%
 
       @include iphoneSize()
         width: 100%
@@ -116,6 +124,8 @@
         border-top-right-radius: 0px
         border-bottom-right-radius: 0px
         border-bottom-left-radius: 0px
+        padding-top: 12%
+
 
       @include surfaceSize()
         width: 100%
@@ -123,6 +133,7 @@
         border-top-right-radius: 0px
         border-bottom-right-radius: 0px
         border-bottom-left-radius: 0px
+        padding-top: 3%
 
       @include ipadSize()
         width: 100%
@@ -133,25 +144,24 @@
 
       @include desktop()
         width: 45%
+        padding-top: 3%
 
       img
-        width: 40%
-        margin-top: 5%
+        width: 35%
 
         @include galaxyFold()
           width: 25%
 
         @include iphoneSize()
-          width: 15%
-          margin-top: 5%
+          width: 25%
+          margin-bottom: 5%
 
         @include surfaceSize()
-          width: 15%
+          width: 25%
           margin-top: 5%
 
         @include ipadSize()
           width: 15%
-          margin-top: 2%
 
       .inputs
         width: 80%
@@ -159,7 +169,7 @@
         display: flex
         flex-direction: column
         justify-content: space-between
-        margin-top: 10%
+        margin-top: 5%
 
         @include galaxyFold()
           width: 90%
@@ -169,7 +179,7 @@
         @include iphoneSize()
           width: 80%
           margin-top: 50px
-          margin-top: 5%
+          margin-top: 4%
 
         @include surfaceSize()
           width: 80%
@@ -180,6 +190,9 @@
           width: 50%
           margin-top: 50px
           margin-top: 2%
+
+        @include desktop()
+          margin-top: 5%
 
       .buttons
         width: 80%
@@ -187,7 +200,7 @@
         flex-direction: row
         justify-content: space-between
         align-items: center
-        margin-top: 10%
+        margin-top: 5%
 
         @include galaxyFold()
           width: 90%
@@ -195,7 +208,7 @@
 
         @include iphoneSize()
           width: 80%
-          margin-top: 50px
+          margin-top: 8%
 
         @include surfaceSize()
           width: 80%
@@ -203,7 +216,7 @@
 
         @include ipadSize()
           width: 50%
-          margin-top: 2%
+          margin-top: 4%
 
         .access, .register
           width: 45%
@@ -238,10 +251,10 @@
         justify-content: space-around
         align-items: center
         width: 35%
-        margin-top: 10%
+        margin-top: 6%
 
         @include galaxyFold()
           margin-top: 5%
 
         @include ipadSize()
-          margin-top: 5%
+          margin-top: 2%
