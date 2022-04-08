@@ -19,7 +19,7 @@
 
           <div class="box-select">
             <label for="purchaseValue">Selecione o tipo de conta</label>
-            <select name="type" id="" formControlName="accountType" name="accountType">
+            <select name="type" id="" name="accountType">
               <option value="fixa">Fixa</option>
               <option value="variavel">Variável</option>
             </select>
@@ -57,6 +57,9 @@
             <label for="payday">Data de pagamento</label>
             <input type="date" name="payday" placeholder="Data para pagamento" name="payday">
           </div>
+        </div>
+
+        <div class="row-buttons">
           <div class="box-button">
             <btn tipo="primary" class="button" (click)="submit()">Cadastrar</btn>
             <btn tipo="tertiary" class="button" (click)="reset()">Cancelar</btn>

@@ -9,16 +9,17 @@
   flex-direction: row
   justify-content: center
   align-items: center
-  background-color: $color-neutral-primary
+  background: $color-neutral-primary
+  animation: fadeIn 1.5s ease-in
+
 
   .box
     width: 65%
-    height: 75%
+    height: 85%
     border-radius: 8px
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.08)
     display: flex
     flex-direction: row
-    animation: fadeIn .7s ease-in
 
     @include galaxyFold()
       display: flex
@@ -45,11 +46,16 @@
       height: 100%
 
     @include desktop()
-      width: 80%
-      height: 80%
+      width: 95%
+      height: 85%
+
+    @include largeDesktop()
+      width: 95%
+      height: 85%
+
 
     .background-image
-      width: 65%
+      width: 60%
       height: 100%
       background: url('/assets/images/bg1-teste.png') no-repeat center center
       background-size: cover
@@ -79,13 +85,16 @@
 
       @include ipadSize()
         width: 100%
-        height: 40%
+        height: 45%
         border-top-left-radius: 0px
         border-bottom-left-radius: 0px
         border-top-right-radius: 0px
+        background-position-y: -50px
 
       @include desktop()
-        width: 65%
+        width: 55%
+        background-position: auto
+        background-size: cover
 
     form
       width: 45%
@@ -98,6 +107,8 @@
       display: flex
       flex-direction: column
       align-items: center
+      padding-top: 5%
+      box-sizing: border-box
 
       @include galaxyFold()
         width: 100%
@@ -105,6 +116,7 @@
         border-top-right-radius: 0px
         border-bottom-right-radius: 0px
         border-bottom-left-radius: 0px
+        padding-top: 4%
 
       @include iphoneSize()
         width: 100%
@@ -112,6 +124,8 @@
         border-top-right-radius: 0px
         border-bottom-right-radius: 0px
         border-bottom-left-radius: 0px
+        padding-top: 12%
+
 
       @include surfaceSize()
         width: 100%
@@ -119,42 +133,42 @@
         border-top-right-radius: 0px
         border-bottom-right-radius: 0px
         border-bottom-left-radius: 0px
+        padding-top: 3%
 
       @include ipadSize()
         width: 100%
-        height: 60%
+        height: 55%
         border-top-right-radius: 0px
         border-bottom-right-radius: 0px
         border-bottom-left-radius: 0px
 
       @include desktop()
-        width: 35%
+        width: 45%
+        padding-top: 3%
 
       img
-        width: 40%
-        margin-top: 5%
+        width: 35%
 
         @include galaxyFold()
           width: 25%
 
         @include iphoneSize()
-          width: 15%
-          margin-top: 5%
+          width: 25%
+          margin-bottom: 5%
 
         @include surfaceSize()
-          width: 15%
+          width: 25%
           margin-top: 5%
 
         @include ipadSize()
           width: 15%
-          margin-top: 2%
 
       .inputs
         width: 80%
-        height: 38%
+        height: 192px
         display: flex
         flex-direction: column
-        justify-content: space-around
+        justify-content: space-between
         margin-top: 8%
 
         @include galaxyFold()
@@ -164,8 +178,7 @@
 
         @include iphoneSize()
           width: 80%
-          margin-top: 50px
-          margin-top: 5%
+          margin-top: 4%
 
         @include surfaceSize()
           width: 80%
@@ -176,6 +189,9 @@
           width: 50%
           margin-top: 50px
           margin-top: 2%
+
+        @include desktop()
+          margin-top: 5%
 
       .buttons
         width: 80%
@@ -187,11 +203,11 @@
 
         @include galaxyFold()
           width: 90%
-          margin-top: 50px
+          margin-top: 3%
 
         @include iphoneSize()
           width: 80%
-          margin-top: 50px
+          margin-top: 8%
 
         @include surfaceSize()
           width: 80%
@@ -199,26 +215,26 @@
 
         @include ipadSize()
           width: 50%
-          margin-top: 2%
+          margin-top: 4%
 
         .access, .register
-          width: 47%
+          width: 45%
           height: 32px
           border-radius: 8px
           border: none
           cursor: pointer
+          color: $color-white
+          font-size: 14px
 
           &:disabled
             background-color: $color-disabled
             color: $color-neutral-secondary
-            cursor: not-allowed
 
         .access:hover
-          opacity: .8
+          opacity: .9
 
         .access
           background-color: $color-primary
-          color: $color-white
 
         .register
           color: $color-primary
