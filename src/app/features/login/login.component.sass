@@ -4,18 +4,23 @@
 
 .container
   width: 100%
-  height: 100%
   display: flex
   flex-direction: row
-  justify-content: center
   align-items: center
+  justify-content: center
   background: $color-neutral-primary
   animation: fadeIn 1.5s ease-in
 
+  @include desktop()
+    width: 100%
+    height: 100%
 
+    @include largeDesktop()
+      width: 100%
+      height: 100%
   .box
     width: 65%
-    height: 85%
+    height: 90%
     border-radius: 8px
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.08)
     display: flex
@@ -26,24 +31,29 @@
       flex-direction: column-reverse
       width: 100%
       height: 100%
+      height: 1200px
 
     @include iphoneSize()
       display: flex
       flex-direction: column-reverse
       width: 100%
       height: 100%
+      height: 1200px
+
 
     @include surfaceSize()
       display: flex
       flex-direction: column-reverse
       width: 100%
       height: 100%
+      height: 1200px
+
 
     @include ipadSize()
       display: flex
       flex-direction: column-reverse
       width: 100%
-      height: 100%
+      height: 1200px
 
     @include desktop()
       width: 95%
@@ -64,32 +74,40 @@
 
       @include galaxyFold()
         width: 100%
-        height: 40%
+        height: 60%
         border-top-left-radius: 0px
         border-bottom-left-radius: 0px
         border-top-right-radius: 0px
+        background: url('/assets/images/background-mobile.svg') no-repeat center center
+        background-size: cover
 
       @include iphoneSize()
         width: 100%
-        height: 40%
+        height: 60%
         border-top-left-radius: 0px
         border-bottom-left-radius: 0px
         border-top-right-radius: 0px
+        background: url('/assets/images/background-mobile.svg') no-repeat center center
+        background-size: cover
 
       @include surfaceSize()
         width: 100%
-        height: 40%
+        height: 60%
         border-top-left-radius: 0px
         border-bottom-left-radius: 0px
         border-top-right-radius: 0px
+        background: url('/assets/images/background-mobile.svg') no-repeat center center
+        background-size: cover
 
       @include ipadSize()
         width: 100%
-        height: 45%
+        height: 55%
         border-top-left-radius: 0px
         border-bottom-left-radius: 0px
         border-top-right-radius: 0px
         background-position-y: -50px
+        background: url('/assets/images/background-mobile.svg') no-repeat center center
+        background-size: cover
 
       @include desktop()
         width: 55%
@@ -112,7 +130,7 @@
 
       @include galaxyFold()
         width: 100%
-        height: 60%
+        height: 40%
         border-top-right-radius: 0px
         border-bottom-right-radius: 0px
         border-bottom-left-radius: 0px
@@ -120,16 +138,15 @@
 
       @include iphoneSize()
         width: 100%
-        height: 60%
+        height: 40%
         border-top-right-radius: 0px
         border-bottom-right-radius: 0px
         border-bottom-left-radius: 0px
         padding-top: 12%
 
-
       @include surfaceSize()
         width: 100%
-        height: 60%
+        height: 40%
         border-top-right-radius: 0px
         border-bottom-right-radius: 0px
         border-bottom-left-radius: 0px
@@ -137,10 +154,11 @@
 
       @include ipadSize()
         width: 100%
-        height: 55%
+        height: 45%
         border-top-right-radius: 0px
         border-bottom-right-radius: 0px
         border-bottom-left-radius: 0px
+        background: red
 
       @include desktop()
         width: 45%
@@ -258,3 +276,11 @@
 
         @include ipadSize()
           margin-top: 2%
+
+        img
+          width: 26px
+          cursor: pointer
+
+          &:hover
+            transform: scale(1.1)
+            transition: transform 150ms ease-in-out
