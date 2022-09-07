@@ -12,19 +12,28 @@
           <input type="date">
         </div>
       </div>
+      <!-- <div class="box-table">
+        <div>Nome da compra</div>
+        <div>Data da compra</div>
+        <div>Categoria</div>
+        <div>Tipo da compra</div>
+        <div>Valor</div>
+        <div>Parcela</div>
+
+      </div> -->
       <table>
         <tr class="first-tr">
-          <th>Item</th>
-          <th>Data da compra</th>
+          <th>Nome da compra</th>
+          <th>Data</th>
           <th>Valor</th>
           <th colspan="2">Tipo da compra</th>
           <th>Parcela Atual</th>
-          <th>Qtd. Parcelas</th>
+          <th>Parcelas</th>
           <th>Categoria</th>
           <th>Data de pagamento</th>
         </tr>
-        <ng-container *ngFor="let item of data; let odd = odd">
-          <tr [class.odd]="odd">
+        <ng-container *ngFor="let item of data; let odd = odd; let even = even">
+          <tr [class.odd]="odd" [class.even]="even">
             <td>{{item.nome}}</td>
             <td>{{item.dataCompra}}</td>
             <td>{{item.valor | currency: 'BRL'}}</td>

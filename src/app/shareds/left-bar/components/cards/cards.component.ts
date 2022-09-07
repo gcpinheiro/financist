@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardsComponent implements OnInit {
 
   @Input() pathIcon = "";
-  @Input() page: string;
+  @Input() name: string;
   constructor() { }
 
   ngOnInit(): void {
