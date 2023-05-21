@@ -26,6 +26,7 @@ const routes: Routes = [
   },
       { path: 'view-financial-accounts',	component: ViewFinancialAccountComponent },
       { path: 'indicators',	component: IndicatorsComponent },
+      { path: 'reports',	component: IndicatorsComponent },
 
 	{ path: '',	redirectTo: 'login', pathMatch: 'full' },
 	{path: 'login', component: LoginComponent },

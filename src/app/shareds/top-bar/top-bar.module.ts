@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DropdownModule } from '../dropdown/dropdown.module';
 import { TopBarComponent } from './top-bar.component';
+import { RouterModule } from '@angular/router';
+import { CardsModule } from '../left-bar/components/cards/cards.module';
 
 
 
@@ -9,7 +11,9 @@ import { TopBarComponent } from './top-bar.component';
   declarations: [TopBarComponent],
   imports: [
     CommonModule,
-    DropdownModule
+    DropdownModule,
+    RouterModule,
+    CardsModule
   ],
   exports:[TopBarComponent]
 })

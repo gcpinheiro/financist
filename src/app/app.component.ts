@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormGroup, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -16,5 +17,10 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
   }
+
+  // range = new FormGroup({
+  //   start: new FormControl<Date | null>(null),
+  //   end: new FormControl<Date | null>(null),
+  // });
 
 }

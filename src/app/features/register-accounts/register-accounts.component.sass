@@ -30,9 +30,34 @@
       height: 85%
       padding: 0 2% 0 5%
       box-sizing: border-box
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+
+      .row
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 70%
+        height: 80%
+
+        .column
+          display: flex
+          flex-direction: column
+          justify-content: space-evenly
+          width: 45%
+          height: 100%
+
+          .item
+            display: flex
+            flex-direction: column
+
+            label
+              margin-bottom: 6px
 
       .box-content
-        width: 96%
+        width: 70%
         height: 80%
         display: flex
         flex-direction: column

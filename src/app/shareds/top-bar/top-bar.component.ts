@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { LeftBarService } from '../left-bar/left-bar.service';
 
@@ -9,12 +10,20 @@ import { LeftBarService } from '../left-bar/left-bar.service';
 })
 export class TopBarComponent implements OnInit {
   date = new Date();
-  data: any;
+  data = {
+    meta: 2500,
+    gastoMensal: 1234.65
+  };
   nome = '-';
   frase = '';
   turno = '';
   state = false;
-  constructor( private _leftBarService: LeftBarService ) { }
+  stateAnimationDropdown = false;
+  @ViewChild('iconDropdown') iconDropdown:ElementRef;
+  constructor( private _leftBarService: LeftBarService,
+    private _router: Router,
+    private renderer2: Renderer2
+    ) { }
 
   ngOnInit(): void {
     const response = localStorage.getItem("user");
@@ -78,4 +87,22 @@ export class TopBarComponent implements OnInit {
     return username? username : '-';
   }
 
+  public logout(){
+    localStorage.removeItem("user");
+    localStorage.removeItem("username");
+    this._router.navigate(['/login']);
+  }
+
+  rotateIcon(){
+    const icon = this.iconDropdown.nativeElement;
+    if(!this.stateAnimationDropdown){
+      this.renderer2.setStyle(icon, 'rotate', '180deg')
+      this.stateAnimationDropdown = !this.stateAnimationDropdown;
+    }
+    else{
+      this.renderer2.setStyle(icon, 'rotate', '0deg')
+       this.stateAnimationDropdown = !this.stateAnimationDropdown;
+    }
+    this.renderer2.setStyle(icon, 'transition', 'rotate .5s ease-in')
+  }
 }

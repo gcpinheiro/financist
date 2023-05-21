@@ -1,108 +1,47 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import {
+  FinancialAccountList,
+  FinancialAccountResponse,
+} from 'src/app/core/types/financial_account';
+import { ViewFinancialAccountService } from './view-financial-account.service';
+
+const today = new Date();
+const month = today.getMonth();
+const year = today.getFullYear();
 
 @Component({
   selector: 'app-view-financial-account',
   templateUrl: './view-financial-account.component.html',
-  styleUrls: ['./view-financial-account.component.sass']
+  styleUrls: ['./view-financial-account.component.sass'],
 })
 export class ViewFinancialAccountComponent implements OnInit {
+  displayedColumns: string[] = [
+    'Compra',
+    'Data Compra',
+    'Valor',
+    'Data pagamento',
+    'Tipo',
+    'Parcela',
+  ];
+  dataSource: FinancialAccountList[] = [];
 
-  data = [
-    {
-      nome: 'Notebook',
-      dataCompra: '18/07/2021',
-      valor: 3999.99,
-      tipoCompra: 'Parcelado',
-      parcelaAtual: 5,
-      qtdParcelas: 10,
-      categoria: 'Eletrônicos',
-      dataPagamento: '10'
-    },
-    {
-      nome: 'Cadeira',
-      dataCompra: '18/07/2021',
-      valor: 999.99,
-      tipoCompra: 'Parcelado',
-      parcelaAtual: 8,
-      qtdParcelas: 12,
-      categoria: 'Moveis',
-      dataPagamento: '10'
-    },
-    {
-      nome: 'Rei do Sanduíche',
-      dataCompra: '18/07/2021',
-      valor: 14.85,
-      tipoCompra: 'A vista',
-      parcelaAtual: 4,
-      qtdParcelas: 10,
-      categoria: 'Comidas',
-      dataPagamento: '10'
-    },
-    {
-      nome: 'Notebook',
-      dataCompra: '18/07/2021',
-      valor: 3999.99,
-      tipoCompra: 'Parcelado',
-      parcelaAtual: 5,
-      qtdParcelas: 10,
-      categoria: 'Eletrônicos',
-      dataPagamento: '10'
-    },
-    {
-      nome: 'Cadeira',
-      dataCompra: '18/07/2021',
-      valor: 999.99,
-      tipoCompra: 'Parcelado',
-      parcelaAtual: 8,
-      qtdParcelas: 12,
-      categoria: 'Moveis',
-      dataPagamento: '10'
-    },
-    {
-      nome: 'Rei do Sanduíche',
-      dataCompra: '18/07/2021',
-      valor: 14.85,
-      tipoCompra: 'A vista',
-      parcelaAtual: 4,
-      qtdParcelas: 10,
-      categoria: 'Comidas',
-      dataPagamento: '10'
-    },
-    {
-      nome: 'Notebook',
-      dataCompra: '18/07/2021',
-      valor: 3999.99,
-      tipoCompra: 'Parcelado',
-      parcelaAtual: 5,
-      qtdParcelas: 10,
-      categoria: 'Eletrônicos',
-      dataPagamento: '10'
-    },
-    {
-      nome: 'Cadeira',
-      dataCompra: '18/07/2021',
-      valor: 999.99,
-      tipoCompra: 'Parcelado',
-      parcelaAtual: 8,
-      qtdParcelas: 12,
-      categoria: 'Moveis',
-      dataPagamento: '10'
-    },
-    {
-      nome: 'Rei do Sanduíche',
-      dataCompra: '18/07/2021',
-      valor: 14.85,
-      tipoCompra: 'A vista',
-      parcelaAtual: 4,
-      qtdParcelas: 10,
-      categoria: 'Comidas',
-      dataPagamento: '10'
-    }
-  ]
+  total = 0;
 
-  constructor() { }
+  range = new FormGroup({
+    start: new FormControl(null),
+    end: new FormControl(null),
+  });
+
+  constructor(
+    private viewFinancialAccoutService: ViewFinancialAccountService
+  ) {}
 
   ngOnInit(): void {
+    this.viewFinancialAccoutService.getFinancialAccount().subscribe((data) => {
+      this.dataSource = data.results;
+      this.total = data.total;
+      console.log('deu bom', data);
+    });
   }
-
 }

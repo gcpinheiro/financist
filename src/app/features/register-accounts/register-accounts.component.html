@@ -6,63 +6,60 @@
     </div>
     <form class="content" >
       <div class="box-content">
-        <div class="box-name-account">
-          <label for="account_name">Conta: </label>
-          <input type="text" name="account_name" placeholder="Digite o nome da conta" name="nameAccount">
-        </div>
-
-        <div class="row-value-type-category">
-          <div class="__box-label-input">
-            <label for="purchaseValue">Valor da compra</label>
-            <input type="text" name="purchaseValue" placeholder="R$ 0,00" name="valueAccount">
+        <div class="row">
+          <div class="column">
+            <div class="item">
+              <label for="account_name">Conta: </label>
+              <input type="text" name="account_name" placeholder="Digite o nome da conta" name="nameAccount">
+            </div>
+            <div class="item">
+              <label for="purchaseValue">Valor da compra</label>
+              <input type="text" name="purchaseValue" placeholder="R$ 0,00" name="valueAccount">
+            </div>
+            <div class="item">
+              <label for="purchaseValue">Selecione o tipo de conta</label>
+              <select name="type" id="" name="accountType">
+                <option value="fixa">Fixa</option>
+                <option value="variavel">Variável</option>
+              </select>
+            </div>
+            <div class="item">
+              <label for="category">Categoria</label>
+              <input type="text" name="category" id="" placeholder="Exemplo: Água, luz, combustível" name="category">
+            </div>
           </div>
+          <div class="column">
+            <div class="item">
+              <label for="purchaseValue">Parcelamento?</label>
+              <select name="type" id="" name="hasInstallment">
+                <option value="a_vista">A vista</option>
+                <option value="parcelado">Parcelado</option>
+              </select>
+            </div>
 
-          <div class="box-select">
-            <label for="purchaseValue">Selecione o tipo de conta</label>
-            <select name="type" id="" name="accountType">
-              <option value="fixa">Fixa</option>
-              <option value="variavel">Variável</option>
-            </select>
-          </div>
+            <div class="item">
+              <label for="purchaseValue">Quantidade de parcelas: </label>
+              <input type="number" name="numberInstallment" placeholder="Escolha uma quantidade"  min="1" max="80"
+              >
+            </div>
 
-          <div class="box-category">
-            <label for="category">Categoria</label>
-            <input type="text" name="category" id="" placeholder="Exemplo: Água, luz, combustível" name="category">
-          </div>
-        </div>
+            <div class="item">
+              <label for="payday">Data de pagamento</label>
+              <input type="date" name="payday" placeholder="Data para pagamento" name="payday">
+            </div>
 
-        <div class="row-date-cash-installments">
-          <div class="box-select">
-            <label for="purchaseValue">Parcelamento?</label>
-            <select name="type" id="" name="hasInstallment">
-              <option value="a_vista">A vista</option>
-              <option value="parcelado">Parcelado</option>
-            </select>
-          </div>
-
-          <div class="number-installments">
-            <label for="purchaseValue">Quantidade de parcelas: </label>
-            <input type="number" name="numberInstallment" placeholder="Escolha uma quantidade"  min="1" max="80"
-            >
-          </div>
-
-          <div class="box-purchase-date">
-            <label for="purchaseValue">Data da compra</label>
-            <input type="date" name="purchaseDate">
-          </div>
-        </div>
-
-        <div class="row-pay">
-          <div class="box-payday">
-            <label for="payday">Data de pagamento</label>
-            <input type="date" name="payday" placeholder="Data para pagamento" name="payday">
+            <div class="item">
+              <label for="purchaseValue">Data da compra</label>
+              <input type="date" name="purchaseDate">
+            </div>
           </div>
         </div>
-
-        <div class="row-buttons">
-          <div class="box-button">
-            <btn tipo="primary" class="button" (click)="submit()">Cadastrar</btn>
-            <btn tipo="tertiary" class="button" (click)="reset()">Cancelar</btn>
+        <div class="row">
+          <div class="row-buttons">
+            <div class="box-button">
+              <btn tipo="primary" class="button" (click)="submit()">Cadastrar</btn>
+              <btn tipo="tertiary" class="button" (click)="reset()">Cancelar</btn>
+            </div>
           </div>
         </div>
       </div>

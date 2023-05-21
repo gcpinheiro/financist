@@ -23,12 +23,26 @@
       </div>
       <img [src]="icon()" alt="" class="icon">
     </div>
-    <dropdown horizontalAlign="left">
-      <div action-dropdown class="box-icon">
-        <img src="assets/images/icons/arrow-down.svg" alt="" class="button-dropdown" style="width: 14px;">
+    <dropdown horizontalAlign="left" (click)="rotateIcon()">
+      <div action-dropdown class="box-icon" #iconDropdown>
+        <img src="assets/images/icons/arrow-down.svg" alt="" class="button-dropdown">
       </div>
       <div class="dropdown-container" dropdown-container>
-
+        <div class="box-avatar">
+          <div class="avatar">
+            <h1 class="name">GC</h1>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="options">
+          <cards pathIcon="assets/images/icons/dashboard.svg" name="Editar perfil" [routerLink]="'/profile'"></cards>
+          <cards pathIcon="assets/images/icons/dashboard.svg" name="Editar perfil" [routerLink]="'/teste'"></cards>
+          <cards pathIcon="assets/images/icons/dashboard.svg" name="Editar perfil" [routerLink]="'/teste'"></cards>
+        </div>
+        <div class="line"></div>
+        <div class="logout">
+          <cards pathIcon="assets/images/icons/logout.svg" name="Sair" (click)="logout()"></cards>
+        </div>
       </div>
     </dropdown>
   </div>

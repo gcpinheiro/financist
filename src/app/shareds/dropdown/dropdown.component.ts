@@ -57,4 +57,8 @@ export class DropdownComponent implements OnInit {
     this.alignDropdown();
   }
 
+  teste(){
+    alert("Oi")
+  }
+
 }
